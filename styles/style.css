@@ -1,0 +1,180 @@
+:root {
+    --gradient: linear-gradient(0deg, #EE7A3A, #FFB354);
+    --fonte-laranja-pimario: #ED7839;
+    --fonte-marrom-primario: #725C5C;
+    --fonte-detalhes: #5C5C5C;
+    --borda-comum: #ECECEC;
+    --borda-input: #CCCCCC;
+    --borda-itens: #E7E7E7;
+    --bg-bege: #FDF1EB;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    transition: .3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-family: Quicksand, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    position: relative;
+    left: 0;
+    top: 0;
+
+    margin: 0;
+    min-width: 220px;
+    height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.25) 1px 0px 10px;
+}
+
+.nome-evento {
+    width: 100%;
+    padding: 11.5px 0;
+    background: var(--gradient);
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+}
+
+.side-bar {
+    width: 100%;
+}
+
+.side-bar ul {
+    padding: 0;
+}
+
+.item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 5px;
+
+    text-decoration: none;
+    list-style: none;
+    border-bottom: 2px solid var(--borda-itens);
+}
+
+.item a {
+    margin: 0 20px;
+
+    font-weight: 600;
+    font-family: Quicksand, sans-serif;
+    color: var(--fonte-marrom-primario);
+    text-decoration: none;
+}
+
+.ativo {
+    background-color: var(--bg-bege);
+}
+
+.ativo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+
+    min-width: 5px;
+    height: 100%;
+    background: var(--gradient);
+}
+
+/*========================= HEADER ===================== */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 5px 3.5%;
+    background-color: var(--bg-bege);
+}
+
+.intro h5,
+h6 {
+    color: var(--fonte-marrom-primario);
+}
+
+.intro h6 {
+    font-size: 12px;
+}
+
+.intro h5 {
+    margin-top: 5px;
+}
+
+.container-login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-idiomas {
+    margin-top: 10px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border-radius: 3px;
+    background-color: transparent;
+    border: 1px solid var(--borda-input);
+}
+
+.textos-boas-vindas>p:first-child {
+    font-size: 14px;
+}
+
+.textos-boas-vindas>p {
+    text-align: end;
+    font-size: 12px;
+}
+
+.icon-perfil {
+    max-width: 30px;
+    position: relative;
+}
+
+.icon-perfil img {
+    border-radius: 100%;
+}
+
+.perfil-notificacoes {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius: 50%;
+    width: 15px;
+
+    background-color: red;
+    color: #fff;
+
+    text-align: center;
+    font-size: 12px;
+}
