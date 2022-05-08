@@ -146,4 +146,8 @@
     .outline img {
         width: 80%;
     }
+    
+    .textos-boas-vindas p {
+        font-size: 10px;
+    }
 }
