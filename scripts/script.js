@@ -1,3 +1,4 @@
+//Função Ver mais no resumo
 function toggleTextoResumo() {
     const textoCurto = document.querySelector('.texto-curto');
     const textoExpandido = document.querySelector('.texto-expandido');
@@ -14,8 +15,8 @@ function toggleTextoResumo() {
 const resumoElemento = document.querySelector('.resumo');
 resumoElemento.addEventListener('click', toggleTextoResumo);
 
-//Manipulação dos inputs em topicos
 
+//Inputs nas discussões 
 function abrirCriarTopico() {
     const containerAddTopico = document.querySelector('.add-discussao');
     const containerTopicoEnviado = document.querySelector('.topico-enviado');
@@ -50,19 +51,15 @@ btnEnviar.addEventListener('click', () => {
     mostrarCardAguardando();
 })
 
+
 //Respostas
-
 function toggleRespostas() {
-    const cardsRespostas = document.querySelectorAll('.card-resposta');
+    const cardsRespostas = document.querySelector('.respostas-do-topico');
 
-    if (cardsRespostas[1].style.display == 'none') {
-        cardsRespostas.forEach(card => {
-            card.style.display = 'block';
-        })
+    if (cardsRespostas.style.display == 'none') {
+        cardsRespostas.style.display = 'block';
     } else {
-        cardsRespostas.forEach(card => {
-            card.style.display = 'none';
-        })
+        cardsRespostas.style.display = 'none';
     }
 }
 

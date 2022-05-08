@@ -1,7 +1,8 @@
 :root {
     --gradient: linear-gradient(0deg, #EE7A3A, #FFB354);
     --fonte-laranja-pimario: #ED7839;
-    --fonte-marrom-primario: #725C5C;
+    --fonte-marrom-secundario: #725C5C;
+    --fonte-marrom-primario: #4E4E4E;
     --fonte-detalhes: #5C5C5C;
     --borda-comum: #ECECEC;
     --borda-input: #CCCCCC;
@@ -93,7 +94,7 @@ aside {
 
     font-weight: 600;
     font-family: Quicksand, sans-serif;
-    color: var(--fonte-marrom-primario);
+    color: var(--fonte-marrom-secundario);
     text-decoration: none;
 }
 
@@ -131,7 +132,7 @@ header {
 
 .intro h5,
 h6 {
-    color: var(--fonte-marrom-primario);
+    color: var(--fonte-marrom-secundario);
 }
 
 .intro h6 {
@@ -159,6 +160,7 @@ h6 {
     border-radius: 3px;
     background-color: transparent;
     border: 1px solid var(--borda-input);
+    color: #333333;
 }
 
 .textos-boas-vindas>p:first-child {
@@ -166,6 +168,7 @@ h6 {
 }
 
 .textos-boas-vindas>p {
+    color: #333333;
     text-align: end;
     font-size: 12px;
 }
@@ -328,14 +331,17 @@ h6 {
     padding: 10px 15px;
     background-color: var(--bg-bege);
     border: 1px solid var(--borda-comum);
-    font-weight: 600;
+    font-weight: 500;
+    color: var(--fonte-marrom-primario);
 }
 
 .detalhes-conteudo {
     width: 100%;
     height: 90%;
     max-height: 90%;
+
     padding: 15px 0 0 15px;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -367,8 +373,9 @@ h6 {
 }
 
 .detalhes-instituicoes p {
-    color: #ADA0A0;
     font-size: 12px;
+    font-weight: 400;
+    color: #ADA0A0;
 }
 
 /* ================= RESUMO ===================== */
@@ -385,7 +392,7 @@ h6 {
 
 .resumo h4 {
     background-color: var(--bg-bege);
-    color: #4E4E4E;
+    color: var(--fonte-marrom-primario);
     font-size: 20px;
 
     padding: 10px 15px;
@@ -420,7 +427,6 @@ h6 {
     border: 1px solid var(--borda-comum);
     border-radius: 3px;
     padding: 0;
-    padding-bottom: 15px;
     margin-bottom: 50px;
 }
 
@@ -429,17 +435,17 @@ h6 {
     padding: 10px 15px;
     font-size: 20px;
     background-color: var(--bg-bege);
-    color: #4E4E4E;
+    color: var(--fonte-marrom-primario);
 }
 
 .container-topico {
     padding: 15px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-
 }
 
 .inicial {
@@ -623,7 +629,6 @@ textarea {
 
 .card-topico {
     width: 100%;
-    padding: 17px 24px;
     margin: 17px auto 0 auto;
 
     display: flex;
@@ -633,6 +638,10 @@ textarea {
     box-shadow: rgba(0, 0, 0, 0.12) 0 0 5px;
     border: 1px solid var(--borda-itens);
     border-radius: 4px;
+}
+
+.card-cabecalho {
+    padding: 17px 24px 10px 24px;
 }
 
 .assunto {
@@ -648,6 +657,7 @@ textarea {
 }
 
 .card-corpo {
+    padding: 0 24px;
     margin: 10px auto;
 }
 
@@ -657,6 +667,7 @@ textarea {
 }
 
 .card-rodape {
+    padding: 11px 24px 17px 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -690,11 +701,13 @@ textarea {
 .overlay-aguardando {
     backdrop-filter: blur(2px);
     background-color: #f7f5f5b6;
+
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -703,7 +716,8 @@ textarea {
 
 .overlay-aguardando p {
     font-size: 16px;
-    font-weight: 700px;
+    font-weight: 700;
+    color: #707070;
 }
 
 .overlay-aguardando a {
@@ -712,12 +726,15 @@ textarea {
     font-size: 14px;
 }
 
+.respostas-do-topico {
+    display: none;
+    width: 100%;
+}
+
 .card-resposta {
     width: 100%;
     border: 1px solid var(--borda-itens);
-    padding: 18px 23px 35px 23px;
-
-    display: none;
+    padding: 18px 23px 18px 23px;
 }
 
 .card-resposta:last-child {
@@ -727,6 +744,7 @@ textarea {
 
 .autor {
     background-color: var(--bg-card-autor);
+    padding-bottom: 35px;
 }
 
 .resposta-cabecalho {
