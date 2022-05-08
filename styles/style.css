@@ -14,6 +14,8 @@
 body {
     margin: 0;
     padding: 0;
+    position: relative;
+    overflow-x: hidden;
 }
 
 * {
@@ -43,6 +45,10 @@ main {
 }
 
 aside {
+    float: none;
+}
+
+.nav-bar-desktop {
     position: fixed;
     z-index: 1;
     top: 0;
@@ -56,6 +62,10 @@ aside {
     box-shadow: rgba(0, 0, 0, 0.25) 1px 0px 10px;
 }
 
+.menu-responsivo {
+    display: none;
+}
+
 .nome-evento {
     width: 100%;
     padding: 11.5px 0;
@@ -65,6 +75,14 @@ aside {
     font-weight: 700;
     font-size: 30px;
     color: #fff;
+}
+
+.menu-logo {
+    text-align: center;
+}
+
+.menu-logo img {
+    height: 30vh;
 }
 
 .side-bar {
@@ -153,14 +171,29 @@ h6 {
 .btn-idiomas {
     margin: 10px 20px;
     height: 30px;
+    padding: 0 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
 
+    position: relative;
     border-radius: 3px;
     background-color: transparent;
     border: 1px solid var(--borda-input);
+}
+
+.btn-idiomas select {
+    cursor: pointer;
+
+    padding: 0;
     color: #333333;
+    background-color: transparent;
+    border: none;
+    -webkit-appearance: none;
+}
+
+option {
+    background-color: var(--bg-bege);
 }
 
 .textos-boas-vindas>p:first-child {
@@ -189,7 +222,7 @@ h6 {
     border-radius: 50%;
     width: 15px;
 
-    background-color: red;
+    background-color: #F85959;
     color: #fff;
 
     text-align: center;
@@ -623,6 +656,8 @@ textarea {
     width: 25%;
 }
 
+/* =============== CARDS ===================== */
+
 .cards {
     margin: 30px 15px;
 }
@@ -726,6 +761,7 @@ textarea {
     font-size: 14px;
 }
 
+/* ====================== RESPOSTAS =========================== */
 .respostas-do-topico {
     display: none;
     width: 100%;
@@ -768,6 +804,8 @@ textarea {
     margin-top: 10px;
     font-size: 14px;
 }
+
+/* ============== FOOTER ===================== */
 
 footer {
     text-align: center;

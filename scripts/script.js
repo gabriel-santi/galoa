@@ -56,14 +56,30 @@ btnEnviar.addEventListener('click', () => {
 function toggleRespostas() {
     const cardsRespostas = document.querySelector('.respostas-do-topico');
 
-    if (cardsRespostas.style.display == 'none') {
-        cardsRespostas.style.display = 'block';
-    } else {
+    cardsRespostas.style.display == 'none' ?
+        cardsRespostas.style.display = 'block' :
         cardsRespostas.style.display = 'none';
-    }
 }
 
 const btnsAbrirRespostas = document.querySelectorAll("#respostas");
 btnsAbrirRespostas.forEach(btn => {
     btn.addEventListener('click', toggleRespostas);
 })
+
+
+//Abrir menu de navegação em dispositivos menores
+function toggleNavegacao() {
+    const barraNavegacao = document.querySelector('.nav-bar-desktop');
+    const iconeMenu = document.querySelector('#icone-menu');
+
+    if (barraNavegacao.style.display == 'block') {
+        barraNavegacao.style.display = 'none'
+        iconeMenu.src = './assets/menu.png'
+    } else {
+        barraNavegacao.style.display = 'block';
+        iconeMenu.src = './assets/voltar.png'
+    }
+}
+
+const btnAbrirMenu = document.querySelector('#abrir-menu');
+btnAbrirMenu.addEventListener('click', toggleNavegacao);
