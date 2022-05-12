@@ -6,9 +6,11 @@ function toggleTextoResumo() {
     if (textoCurto.style.display == '') {
         textoCurto.style.display = 'none';
         textoExpandido.style.display = 'block';
+        textoExpandido.style.animation = 'aparecer .5s';
     } else {
         textoCurto.style.display = '';
         textoExpandido.style.display = 'none';
+        textoExpandido.style.animation = 'aparecer .5s';
     }
 }
 
@@ -24,6 +26,7 @@ function abrirCriarTopico() {
 
     containerInicial.style.display = 'none'
     containerAddTopico.style.display = 'flex';
+    containerAddTopico.style.animation = 'aparecer .5s';
     containerTopicoEnviado.style.display = 'none';
 }
 
@@ -38,6 +41,8 @@ function abrirTopicoEnviado() {
 
     containerAddTopico.style.display = 'none';
     containerTopicoEnviado.style.display = 'flex';
+    containerTopicoEnviado.style.animation = 'aparecer .5s';
+
 }
 
 function mostrarCardAguardando() {
@@ -53,18 +58,23 @@ btnEnviar.addEventListener('click', () => {
 
 
 //Respostas
-function toggleRespostas() {
+function AbrirCardCompleto() {
     const cardsRespostas = document.querySelector('.respostas-do-topico');
+    const textoExpandidoCard = document.querySelector('.card-texto-expandido');
+    const textoCurtoCard = document.querySelector('.card-texto-curto');
 
-    cardsRespostas.style.display == 'none' ?
-        cardsRespostas.style.display = 'block' :
+    if (cardsRespostas.style.display == 'none') {
+        textoExpandidoCard.style.display = 'block'
+        cardsRespostas.style.display = 'block';
+        textoCurtoCard.style.display = 'none';
+    } else {
+        textoExpandidoCard.style.display = 'none';
         cardsRespostas.style.display = 'none';
+        textoCurtoCard.style.display = 'block';
+    }
 }
-
-const btnsAbrirRespostas = document.querySelectorAll("#respostas");
-btnsAbrirRespostas.forEach(btn => {
-    btn.addEventListener('click', toggleRespostas);
-})
+const cardClicavel = document.querySelector("#cardComRespostas");
+cardClicavel.addEventListener('click', AbrirCardCompleto);
 
 
 //Abrir menu de navegação em dispositivos menores

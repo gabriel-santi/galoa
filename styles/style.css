@@ -39,15 +39,6 @@ p {
     font-family: Quicksand, sans-serif;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-}
-
-aside {
-    float: none;
-}
-
 .nav-bar-desktop {
     position: fixed;
     z-index: 1;
@@ -75,14 +66,6 @@ aside {
     font-weight: 700;
     font-size: 30px;
     color: #fff;
-}
-
-.menu-logo {
-    text-align: center;
-}
-
-.menu-logo img {
-    height: 30vh;
 }
 
 .side-bar {
@@ -140,12 +123,16 @@ aside {
 }
 
 header {
+
+    background-color: var(--bg-bege);
+}
+
+.cabecalho {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
     padding: 5px 3.5%;
-    background-color: var(--bg-bege);
 }
 
 .intro h5,
@@ -239,16 +226,17 @@ option {
 
 .titulo-opcoes {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
-    margin: 20px 0 10px 0;
+    margin: 20px 8px 10px 0;
 }
 
 .titulo {
+    text-align: start;
     color: var(--fonte-laranja-pimario);
     font-weight: 900;
     font-size: 18px;
-    width: 75%;
+    width: 70%;
 }
 
 .opcoes {
@@ -699,6 +687,14 @@ textarea {
 .card-corpo p {
     font-size: 14px;
     font-weight: 400;
+}
+
+.card-texto-expandido {
+    display: none;
+}
+
+#cardComRespostas {
+    cursor: pointer;
 }
 
 .card-rodape {
